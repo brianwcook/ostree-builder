@@ -487,6 +487,10 @@ spec:
         params:
           - name: BASE_IMAGES_DIGESTS
             value: $(tasks.build-container-amd64.results.BASE_IMAGES_DIGESTS)
+          - name: image-digest
+            value: $(tasks.build-container.results.IMAGE_DIGEST)
+          - name: image-url
+            value: $(tasks.build-container.results.IMAGE_URL)
         taskRef:
           params:
             - name: name
